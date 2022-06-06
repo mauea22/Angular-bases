@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 import { Personaje } from '../interfaces/dbz.interface';
@@ -27,20 +27,5 @@ export class MainPageComponent  {
     nombre: '',
     poder: 0
   }
-
-  agregar(){
-    if(this.nuevo.nombre.trim().length === 0){
-      return;
-    }
-    
-    this.personajes.push(this.nuevo);
-
-    //resetear los inputs 
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
-  }
-
 
 }
