@@ -14,7 +14,10 @@
         </ul> -->
     </div>
     <div class="col">
-        <app-agregar [personajes]="personajes" [nuevo]="nuevo"></app-agregar>
+        <app-agregar 
+        [nuevo]="nuevo"
+        (onNuevoPersonaje)="agregarNuevoPersonaje($event)"
+        ></app-agregar>
         <!-- <h3>Agregar</h3>
         <hr>
         <form (ngSubmit)="agregar()">
